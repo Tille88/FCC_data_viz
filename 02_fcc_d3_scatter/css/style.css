@@ -1,0 +1,27 @@
+.domain {
+		opacity: 0;
+	}
+	
+	body {
+		font-family: 'Lato', sans-serif;
+		background-color: #E2E5E7;
+    text-align: center;
+    margin: -10px;
+	}
+
+	p {
+		font-size: 80%;
+		opacity: 0.6;
+	}
+
+	h1 {
+		color: #4EBFB4;
+	}
+
+	circle {
+		fill: #4EBFB4;
+	}
+
+	svg g g text {
+		fill: #D93250;
+	}
