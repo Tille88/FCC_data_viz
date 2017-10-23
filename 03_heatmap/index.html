@@ -1,0 +1,107 @@
+
+
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+	
+	/*
+	body {
+		font-family: 'Lato', sans-serif;		
+		background: -webkit-linear-gradient(left, rgba(74,119,122,0), rgba(74,119,122,1)); 
+	    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); 
+	    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); 
+	    background: linear-gradient(to bottom right, rgba(74,119,122,0), rgba(0,128,128,0.4)); 
+	}
+	*/
+
+body {
+		font-family: 'Lato', sans-serif;		
+		background: -webkit-linear-gradient(left, rgba(74,119,122,0), rgba(74,119,122,1)); 
+	    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); 
+	    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); 
+	    background: linear-gradient(to bottom right, rgba(104,131,139,0.4), rgba(0,128,128,0.7)); 
+
+	    -webkit-transition: all 2s linear;
+		-moz-transition: all 2s linear;
+		-o-transition: all 2s linear;
+		-ms-transition: all 2s linear;
+		transition: all 2s linear;
+	}
+
+
+svg {
+	display: block;
+	margin: 0 auto;	
+
+}
+
+
+.xAxisMain text{
+		/*text-anchor: start;  or start or end*/ 
+		font-family: 'Lato', sans-serif;
+		transform: translate(5px, -5px)rotate(45deg);
+		text-anchor: start;
+}
+
+.yAxisMain text{
+		/*text-anchor: start;  or start or end*/ 
+		font-family: 'Lato', sans-serif;
+		transform: translate(5px, 0px);
+}
+
+.close-linegraph {
+	cursor: pointer;
+}
+
+.close-linegraph:hover {
+	stroke-width: 1.5;
+	fill: rgb(50,50,50);
+}
+
+
+.tick line{
+	opacity: 0;
+}
+
+.domain {
+	opacity: 0;
+}
+
+/*
+.heatmap-element:hover {
+	opacity: 1;
+	stroke: rgba(251,230,107,1);
+}
+*/
+
+.hover-polygon {
+	opacity: 1;
+	stroke: rgba(251,230,107,1);
+}
+
+
+</style>
+  
+ 
+  
+  
+</head>
+
+<body>
+ 
+<h1>PlaceholderText<i class="fa fa-times" aria-hidden="true"></i></h1>
+<p class="temp-text">test</p>
+
+<!-- 
+<script src="https://d3js.org/d3.v4.js"></script>
+-->
+<script src="js/d3js.org_d3.v4.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
