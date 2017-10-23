@@ -1,12 +1,10 @@
 
-// User Story: I can mouse over the meteorite's data point for additional data.
 
-
-var width = 960,
+var width = 500,
     height = 500;
 
 
-var projection = d3.geoMercator()
+var projection = d3.geoAzimuthalEqualArea()//d3.geoMercator()
   .scale(width / 2 / Math.PI)
   .translate([width / 2, height / 2]);
 
@@ -33,6 +31,10 @@ d3.json(url, function(error, topology) {
       // topojson.feature(data, data);
       data = data.features.filter(function(d) { return d.geometry !== null});
 
+      var div = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+
       svg.selectAll("circle")
         .data(data)
         .enter()
@@ -40,8 +42,21 @@ d3.json(url, function(error, topology) {
         .attrs({
           cx: function(d) { return projection(d.geometry.coordinates)[0]; },
           cy: function(d) { return projection(d.geometry.coordinates)[1]; },
-          r: function(d) { return Math.sqrt(d.properties.mass) * 0.005; }, //Alter to be dependent on sth... Math.sqrt(area/Math.PI)
+          r: function(d) { return Math.sqrt(d.properties.mass) * 0.005; }, //Math.sqrt(area/Math.PI), constant cancel out
           opacity: 0.6
+        })
+        .on("mouseover", function(d) {
+            div.transition()
+                .duration(50)
+                .style("opacity", .9);
+            div .html("Name: " + d.properties.name + "<br>Mass: " + d.properties.mass + "kg(?)")
+                .style("left", (d3.event.pageX + 8) + "px")
+                .style("top", (d3.event.pageY - 8) + "px");
+            })
+        .on("mouseout", function(d) {
+            div.transition()
+                .duration(200)
+                .style("opacity", 0);
         });
 
   });

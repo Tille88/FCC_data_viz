@@ -12,7 +12,11 @@
 svg {
 	display: block;
 	margin: 0 auto;
+}
 
+
+h1 {
+	text-align: center;
 }
 
 path{
@@ -20,6 +24,18 @@ path{
 	fill: rgba(40,40,40,0.2);
 }
 
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 50px;
+  height: 38px;
+  padding: 2px;
+  font: 8px sans-serif;
+  background: rgb(120,120,120);
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
 
 
 </style>
@@ -30,7 +46,9 @@ path{
 </head>
 
 <body>
-
+<h1>
+	Free Code Camp - D3 Mapping, meteor strikes
+</h1>
 
 <!--
 <script src="https://d3js.org/d3.v4.js"></script>
@@ -38,7 +56,6 @@ path{
 <script src="js/d3js.org_d3.v4.js"></script>
 <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v2.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script src="js/index.js"></script>
 
 </body>
